@@ -1,0 +1,5 @@
+G:\新闻\Journalism\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+G:\新闻\Journalism\Common\bin\Debug\Common.dll
+G:\新闻\Journalism\Common\bin\Debug\Common.pdb
+G:\新闻\Journalism\Common\obj\Debug\Common.dll
+G:\新闻\Journalism\Common\obj\Debug\Common.pdb

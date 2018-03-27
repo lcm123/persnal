@@ -1,0 +1,124 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>后台管理系统登录</title>
+    <link href="~/Content/index.css" rel="stylesheet" />
+    <script type="text/javascript">
+        if (window.parent.window != window)
+        {
+            window.top.location.href = "/Hone/CheckLogin";
+        }
+    </script>
+    <script src="/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script type="text/javascript">
+        function changeCheckCode() {
+            $("#img").attr("src", $("#img").attr("src") + 1);
+        }
+        function afterLogin(data) {
+            var serverData = data.split(':');
+            if (serverData[0] == "ok") {
+                window.location.href = "/Hone/Index";
+            } else if (serverData[0] == "no") {
+                $("#errorMsg").text(serverData[1]);
+                changeCheckCode();
+            } else {
+                $("#errorMsg").text("系统繁忙!!");
+            }
+        }
+    </script>
+</head>
+<body style="padding: 10px">
+    <div id="login">
+        <div id="loginlogo">
+        </div>
+        <div id="loginpanel">
+            <div class="panel-h">
+            </div>
+            <div class="panel-c">
+                <div class="panel-c-l">
+                    @using (Ajax.BeginForm("UserLogin", new { }, new AjaxOptions() { HttpMethod = "post", OnSuccess = "afterLogin" }, new { id = "loginForm" }))
+                    {
+                        <table cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td align="left" colspan="2">
+                                        <h3>
+                                            请使用系统账号登录
+                                        </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">
+                                        账号：
+                                    </td>
+                                    <td align="left">
+                                        <input type="text" name="LoginCode" id="LoginCode" class="login-text" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">
+                                        密码：
+                                    </td>
+                                    <td align="left">
+                                        <input type="password" name="LoginPwd" id="LoginPwd" value="123" class="login-text" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        验证码：
+                                    </td>
+                                    <td align="left">
+                                        <input type="text" class="login-text" id="code" name="vCode"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <img id="img" src="/Login/ShowValidateCode/?id=1" style="float: left; height: 24px;" />
+                                        <div style="float: left; margin-left: 5px; margin-top: 10px;">
+                                            <a href="javascript:void(0)" onclick="changeCheckCode();return false;">看不清，换一张</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" colspan="2">
+                                        <input type="submit" id="btnLogin" value="登录" class="login-btn" onclick="showLoing" />
+                                        <span id="errorMsg"></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    }
+                </div>
+                <div class="panel-c-r">
+                    <p>
+                        请从左侧输入登录账号和密码登录
+                    </p>
+                    <p>
+                        如果遇到系统问题，请联系网络管理员。
+                    </p>
+                    <p>
+                        如果没有账号，请联系网站管理员。
+                    </p>
+                    <p>
+                        ......
+                    </p>
+                </div>
+            </div>
+            <div class="panel-f">
+            </div>
+        </div>
+        <div id="logincopyright">
+            Copyright ? 2017 Lichaoming.com
+        </div>
+    </div>
+</body>
+</html>

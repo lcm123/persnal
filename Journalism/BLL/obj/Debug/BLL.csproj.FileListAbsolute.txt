@@ -1,0 +1,9 @@
+G:\新闻\Journalism\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+G:\新闻\Journalism\BLL\bin\Debug\BLL.dll
+G:\新闻\Journalism\BLL\bin\Debug\BLL.pdb
+G:\新闻\Journalism\BLL\bin\Debug\DAL.dll
+G:\新闻\Journalism\BLL\bin\Debug\Model.dll
+G:\新闻\Journalism\BLL\bin\Debug\DAL.pdb
+G:\新闻\Journalism\BLL\bin\Debug\Model.pdb
+G:\新闻\Journalism\BLL\obj\Debug\BLL.dll
+G:\新闻\Journalism\BLL\obj\Debug\BLL.pdb

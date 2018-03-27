@@ -1,0 +1,7 @@
+G:\新闻\Journalism\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+G:\新闻\Journalism\DAL\bin\Debug\DAL.dll
+G:\新闻\Journalism\DAL\bin\Debug\DAL.pdb
+G:\新闻\Journalism\DAL\bin\Debug\Model.dll
+G:\新闻\Journalism\DAL\bin\Debug\Model.pdb
+G:\新闻\Journalism\DAL\obj\Debug\DAL.dll
+G:\新闻\Journalism\DAL\obj\Debug\DAL.pdb

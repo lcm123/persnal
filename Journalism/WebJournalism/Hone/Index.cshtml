@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/themes/default/easyui.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="~/Scripts/easyui-lang-zh_CN.js"></script>
+    <script src="~/Scripts/jquery.easyui.min.js"></script>
+    <link href="~/Content/themes/icon.css" rel="stylesheet" />
+    <script type="text/javascript">
+
+    </script>
+</head>
+</head>
+<body class="easyui-layout">
+    <!------------------顶部布局-------------->
+    <div  region="north" border="false" style="height:65px;background:#B3DFDA; overflow:hidden;background-image:url('/Content/Images/bg3.png')">
+        <img src="/Content/Images/logo.jpg" />
+    </div>
+    <!------------------顶部布局结束-------------->
+    <!------------------左边布局-------------->
+    <div region="west" split="true" title="West" style="width:150px;padding:2px;">
+        <div id="aa" class="easyui-accordion" style="width:auto;height:auto;">
+            <div title="新闻管理" iconcls="icon-ok" style="overflow:auto;padding:10px;">
+                <a href="javascript:void(0)" class="detailLink123" url="/AdminNewList/Index">新闻管理</a>
+            </div>
+            <div title="评论管理" iconcls="icon-reload" selected="true" style="padding:10px;">
+                <a href="javascript:void(0)" class="detailLink123" url="/AdminCommentList/Index">评论管理</a>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <!------------------左边布局结束-------------->
+    <!-----------------底部布局-------------->
+    <div region="south" border="false" style="height:30px;background:#A9FACD;padding:3px; text-align:center">版权  &copy; lichaoming.com</div>
+    <!-----------------底部布局结束-------------->
+    <!-----------------中间布局------------->
+    <div region="center" title="Main Title">
+        <div class="easyui-tabs" style="width:600px;height:250px" fit="true" id="tt">
+            <div title="新闻管理" style="padding:10px" data-options="closable:true">
+                <iframe src="/AdminNewList/Index" scrolling="no" width="95%" height="95%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------中间布局结束------------->
+</body>
+
+</html>
+
